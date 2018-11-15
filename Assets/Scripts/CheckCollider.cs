@@ -51,10 +51,10 @@ public class CheckCollider : MonoBehaviour {
 		newPos.y = Mathf.Round (pos.y / gridSize) * gridSize;
 		tr.position = newPos;
 		
-		GetComponent<PolygonCollider2D> ().enabled = false;
+		GetComponent<BoxCollider2D> ().enabled = false;
 
 		GetComponent<PlatformEffector2D> ().enabled = true;
 		GetComponent<CapsuleCollider2D> ().enabled = true;
-		GetComponent<BoxCollider2D> ().enabled = true;
+		GetComponent<PolygonCollider2D> ().enabled = true;
 	}
 }
