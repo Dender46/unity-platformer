@@ -3,29 +3,31 @@
 public class CheckCollider : MonoBehaviour {
 
 	public float waitTime		= 1f;
-	public float maxVelocity	= 1.5f;
-	public float maxAngVelocity	= 1f;
+	public float minVelocity = 1.5f;
+	public float minAngVelocity = 1f;
 	public float gridSizeOffest = 0f;
 
 	bool collided = false;
-	float gridSize;
+	float gridSizeX;
+    float gridSizeY;
 
-	Rigidbody2D	rb;
+    Rigidbody2D	rb;
 	Transform	tr;
 
 	void Start() {
 		rb = GetComponent<Rigidbody2D> ();
 		tr = GetComponent<Transform> ();
 
-		gridSize = tr.localScale.x + gridSizeOffest;
-	}
+		gridSizeX = tr.localScale.x + gridSizeOffest;
+        gridSizeY = tr.localScale.y + gridSizeOffest;
+    }
 
 	void FixedUpdate() {
 		if (rb.isKinematic)
 			return;
 
-		if (collided && rb.velocity.magnitude < maxVelocity &&
-		    rb.angularVelocity < maxAngVelocity) {
+		if (collided && rb.velocity.magnitude < minVelocity &&
+		    rb.angularVelocity < minAngVelocity) {
 			Invoke ("MakeStatic", waitTime);
 		} else {
 			CancelInvoke ("MakeStatic");
@@ -47,14 +49,14 @@ public class CheckCollider : MonoBehaviour {
 
 		Vector3 pos = tr.position;	
 		Vector3 newPos = new Vector3 ();
-		newPos.x = Mathf.Round (pos.x / gridSize) * gridSize;
-		newPos.y = Mathf.Round (pos.y / gridSize) * gridSize;
+		newPos.x = Mathf.Round (pos.x / gridSizeX) * gridSizeX;
+		newPos.y = Mathf.Round (pos.y / gridSizeY) * gridSizeY;
 		tr.position = newPos;
 		
 		GetComponent<BoxCollider2D> ().enabled = false;
 
-		GetComponent<PlatformEffector2D> ().enabled = true;
-		GetComponent<CapsuleCollider2D> ().enabled = true;
-		GetComponent<PolygonCollider2D> ().enabled = true;
+        GetComponent<CapsuleCollider2D>().enabled = true;
+        GetComponent<PolygonCollider2D>().enabled = true;
+        GetComponent<PlatformEffector2D> ().enabled = true;
 	}
 }
