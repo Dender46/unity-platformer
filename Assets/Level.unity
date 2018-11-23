@@ -367,7 +367,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
       propertyPath: m_LocalScale.x
-      value: 20.124
+      value: 20.484
       objectReference: {fileID: 0}
     - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
       propertyPath: m_LocalScale.y
@@ -557,6 +557,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1471093238
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472867498915094, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_Name
+      value: Ground (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 7.524
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 917de7c8877e04b3cb3d46243a37bc04, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1704770256
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +663,7 @@ Camera:
   far clip plane: 1000
   field of view: 41.1
   orthographic: 1
-  orthographic size: 5.08
+  orthographic size: 5.98
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
