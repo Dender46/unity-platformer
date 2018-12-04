@@ -25,7 +25,7 @@ public class CheckCollider : MonoBehaviour {
 	void FixedUpdate() {
 		if (rb.isKinematic)
 			return;
-
+        Debug.Log(rb.velocity.magnitude);
 		if (collided && rb.velocity.magnitude < minVelocity &&
 		    rb.angularVelocity < minAngVelocity) {
 			Invoke ("MakeStatic", waitTime);
@@ -39,9 +39,17 @@ public class CheckCollider : MonoBehaviour {
 		    col.gameObject.layer == 9) {
 			collided = true;
 		}
+
+        if (col.collider.tag == "Enemy") {
+            if (!rb.isKinematic && rb.velocity.magnitude > 5)
+                Destroy(col.collider);
+            else {
+                Destroy(this.gameObject);
+            }
+        }
 	}
 
-	void MakeStatic() {
+    void MakeStatic() {
 		rb.isKinematic = true;
 		rb.velocity = new Vector2 (0f, 0f);
 		rb.angularVelocity = 0f;

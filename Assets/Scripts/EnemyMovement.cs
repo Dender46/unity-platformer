@@ -13,13 +13,11 @@ public class EnemyMovement : MonoBehaviour {
 		movement.Move (direction * speed * Time.deltaTime, false, false);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, 1f);
-		Debug.Log (groundInfo.collider);
 		if (!groundInfo.collider)
 			FlipDirection ();
 	}
 
 	void FlipDirection() {
-		Debug.Log (direction);
 		if (direction == 1f) {
 			transform.eulerAngles = new Vector3 (0, -180, 0);
 			direction = -1f;
