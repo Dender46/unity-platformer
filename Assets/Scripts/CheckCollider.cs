@@ -42,7 +42,9 @@ public class CheckCollider : MonoBehaviour {
 
         if (!rb.isKinematic && col.collider.tag == "Player")
         {
-            col.collider.gameObject.GetComponent<PlayerStats>().health--;
+            col.collider.gameObject
+            .GetComponent<PlayerStats>()
+            .TakeDamage();
         }
 
         if (col.collider.tag == "Enemy") {
