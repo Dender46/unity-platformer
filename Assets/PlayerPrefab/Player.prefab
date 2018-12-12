@@ -37,7 +37,6 @@ GameObject:
   - component: {fileID: 212142204468033636}
   - component: {fileID: 114749341051469634}
   - component: {fileID: 114828093457795972}
-  - component: {fileID: 61201572646450510}
   m_Layer: 8
   m_Name: Arm
   m_TagString: Untagged
@@ -158,8 +157,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1409484142873618}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35149997, y: 0.01, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11000001, y: -2.3927598, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4431929830124474}
@@ -190,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 1175350873803766}
   m_LocalRotation: {x: -0, y: -0, z: 0.1736482, w: 0.9848078}
   m_LocalPosition: {x: -0.152, y: 0.048, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children:
   - {fileID: 4410834240441108}
   m_Father: {fileID: 4498443975443460}
@@ -241,31 +240,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14, y: 0.79296386}
   m_EdgeRadius: 0.27
---- !u!61 &61201572646450510
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1175350873803766}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.2291358, y: -0.2864236}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.118625976, y: 0.8257691}
-    oldSize: {x: 1.2142857, y: 1}
-    newSize: {x: 0.9, y: 0.26666668}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.31719053, y: 0.31320453}
-  m_EdgeRadius: 0
 --- !u!70 &70690468437410314
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -356,7 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 6
   maxHealth: 6
-  mortal: 0
+  mortal: 1
   hearts:
   - {fileID: 0}
   - {fileID: 0}
