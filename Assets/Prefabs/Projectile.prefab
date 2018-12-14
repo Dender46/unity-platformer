@@ -22,9 +22,6 @@ GameObject:
   - component: {fileID: 212964647936953022}
   - component: {fileID: 50981015305766532}
   - component: {fileID: 61162851270530558}
-  - component: {fileID: 60415850991892858}
-  - component: {fileID: 70263461654730550}
-  - component: {fileID: 251989526618564036}
   - component: {fileID: 114674742290240646}
   m_Layer: 9
   m_Name: Projectile
@@ -66,34 +63,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &60415850991892858
-PolygonCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1917735771667784}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 544c8a4ea99a54561a2470db72c4a3bc, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.56, y: -0.56}
-      - {x: -0.56, y: 0.56}
-      - {x: 0.56, y: 0.56}
-      - {x: 0.56, y: -0.56}
 --- !u!61 &61162851270530558
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -119,21 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0.022
---- !u!70 &70263461654730550
-CapsuleCollider2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1917735771667784}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 544c8a4ea99a54561a2470db72c4a3bc, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0000004, y: 1}
-  m_Direction: 1
 --- !u!114 &114674742290240646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,21 +149,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!251 &251989526618564036
-PlatformEffector2D:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1917735771667784}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RotationalOffset: 0
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 1
-  m_SurfaceArc: 110
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 1
