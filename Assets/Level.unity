@@ -490,35 +490,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4293758469011294, guid: 917de7c8877e04b3cb3d46243a37bc04,
     type: 2}
   m_PrefabInternal: {fileID: 502587535}
---- !u!1 &598045486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1409484142873618, guid: 95d05c08a359b44fbbd78013768517ca,
-    type: 2}
-  m_PrefabInternal: {fileID: 699038373}
---- !u!114 &598045487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 598045486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c2cfaab57b9274386aaba65acc9e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 6
-  maxHealth: 6
-  damaged: 0
-  hearts:
-  - {fileID: 2010342483}
-  - {fileID: 1801230826}
-  - {fileID: 1582628739}
-  - {fileID: 1521065378}
-  - {fileID: 1808722867}
-  - {fileID: 1668991221}
-  fullHeart: {fileID: 21300000, guid: 367bfb6f90ecd401488544a7409f1216, type: 3}
-  emptyHeart: {fileID: 21300000, guid: a47b8c81d54548341bc8f2ce637b5bdb, type: 3}
-  animator: {fileID: 865349706}
 --- !u!1001 &699038373
 Prefab:
   m_ObjectHideFlags: 0
@@ -558,6 +529,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114750693180277316, guid: 95d05c08a359b44fbbd78013768517ca,
+        type: 2}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 2010342483}
+    - target: {fileID: 114750693180277316, guid: 95d05c08a359b44fbbd78013768517ca,
+        type: 2}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1801230826}
+    - target: {fileID: 114750693180277316, guid: 95d05c08a359b44fbbd78013768517ca,
+        type: 2}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1582628739}
+    - target: {fileID: 114750693180277316, guid: 95d05c08a359b44fbbd78013768517ca,
+        type: 2}
+      propertyPath: hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1521065378}
+    - target: {fileID: 114750693180277316, guid: 95d05c08a359b44fbbd78013768517ca,
+        type: 2}
+      propertyPath: hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 1808722867}
+    - target: {fileID: 114750693180277316, guid: 95d05c08a359b44fbbd78013768517ca,
+        type: 2}
+      propertyPath: hearts.Array.data[5]
+      value: 
+      objectReference: {fileID: 1668991221}
     - target: {fileID: 212854111406443728, guid: 95d05c08a359b44fbbd78013768517ca,
         type: 2}
       propertyPath: m_Color.a
@@ -671,11 +672,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d170421c29b1434da4e2dd81cefad6c, type: 2}
   m_IsPrefabAsset: 0
---- !u!95 &865349706 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95199637126590106, guid: 95d05c08a359b44fbbd78013768517ca,
-    type: 2}
-  m_PrefabInternal: {fileID: 699038373}
 --- !u!4 &1121778278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4498443975443460, guid: 95d05c08a359b44fbbd78013768517ca,
