@@ -80,6 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleX: 2
   scaleY: 2
+  factorX: 0.8
+  factorY: 0.8
   cubeSize: 0.36
 --- !u!212 &212162174866844860
 SpriteRenderer:

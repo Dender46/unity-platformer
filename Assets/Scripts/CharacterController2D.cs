@@ -11,6 +11,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
+	[SerializeField] private Animator m_Animator;
 
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
@@ -62,6 +63,9 @@ public class CharacterController2D : MonoBehaviour
 					OnLandEvent.Invoke();
 			}
 		}
+		
+		m_Animator.SetFloat ("Vertical Velocity", m_Rigidbody2D.velocity.y);
+		m_Animator.SetFloat ("Running", Mathf.Abs(m_Rigidbody2D.velocity.x));
 	}
 
 
@@ -134,6 +138,10 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+	public void OnLand()
+	{
+		m_Animator.SetBool ("On Land", true);
+	}
 
 	private void Flip()
 	{

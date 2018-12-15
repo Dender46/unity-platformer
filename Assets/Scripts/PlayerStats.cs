@@ -8,18 +8,17 @@ public class PlayerStats : MonoBehaviour {
     public int health;
     public int maxHealth;
 
-    public bool mortal;
+    public bool damaged;
 
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-    Animator animator;
+    public Animator animator;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
-        animator.SetBool("Mortal", true);
+		animator.SetBool("Damaged", false);
     }
 
     private void Update()
@@ -43,7 +42,7 @@ public class PlayerStats : MonoBehaviour {
 
     public void TakeDamage()
     {
-        if (!mortal)
+        if (damaged)
             return;
         health--;
         ChangeMortality();
@@ -51,9 +50,9 @@ public class PlayerStats : MonoBehaviour {
 
     public void ChangeMortality()
     {
-        mortal = !mortal;
-        animator.SetBool("Mortal", mortal);
-        if (!mortal)
+		damaged = !damaged;
+		animator.SetBool("Damaged", damaged);
+		if (damaged)
             Invoke("ChangeMortality", 2);
     }
 }

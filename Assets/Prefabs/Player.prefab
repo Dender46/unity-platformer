@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 61255028956865638}
   - component: {fileID: 114439735002853020}
   - component: {fileID: 114164267029599162}
+  - component: {fileID: 114750693180277316}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -186,7 +187,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1175350873803766}
-  m_LocalRotation: {x: -0, y: -0, z: 0.1736482, w: 0.9848078}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.152, y: 0.048, z: 0}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children:
@@ -230,8 +231,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85714287, y: 1.6428572}
-    newSize: {x: 0.85714287, y: 1.6428572}
+    oldSize: {x: 0.85714287, y: 1.7142857}
+    newSize: {x: 0.85714287, y: 1.7142857}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -306,9 +307,21 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 4593781309961268}
   m_CeilingCheck: {fileID: 4311841919310220}
   m_CrouchDisableCollider: {fileID: 0}
+  m_Animator: {fileID: 95199637126590106}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114439735002853020}
+        m_MethodName: OnLand
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnCrouchEvent:
@@ -327,6 +340,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126b945f7800a47ea9484af85d189974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114750693180277316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1409484142873618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c2cfaab57b9274386aaba65acc9e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 6
+  maxHealth: 6
+  damaged: 0
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: 367bfb6f90ecd401488544a7409f1216, type: 3}
+  emptyHeart: {fileID: 21300000, guid: a47b8c81d54548341bc8f2ce637b5bdb, type: 3}
+  animator: {fileID: 95199637126590106}
 --- !u!114 &114828093457795972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,7 +464,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300008, guid: 2fb2660e2ed6441dca6c146633a9c1bd, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 2fb2660e2ed6441dca6c146633a9c1bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

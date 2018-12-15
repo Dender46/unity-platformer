@@ -12,13 +12,9 @@ public class PlayerMovement : MonoBehaviour {
 	void Update() {
 		horizontalMove = Input.GetAxisRaw ("Horizontal");
 
-		if (Input.GetButtonDown ("Jump"))
+		if (Input.GetButtonDown ("Jump")) {
 			jump = true;
-		
-		if (Input.GetButtonDown ("Crouch"))
-			crouch = true;
-		else if (Input.GetButtonUp ("Crouch"))
-			crouch = false;
+		}
 	}
 
 	void FixedUpdate() {
