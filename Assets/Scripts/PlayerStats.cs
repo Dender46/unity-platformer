@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,11 +13,14 @@ public class PlayerStats : MonoBehaviour {
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-    public Animator animator;
+    public SpriteRenderer texture;
+    private Shader shaderGUItext;
+    private Shader shaderSpritesDefault;
 
-    private void Start()
+    void Start()
     {
-		animator.SetBool("Damaged", false);
+        shaderGUItext = Shader.Find("GUI/Text Shader");
+        shaderSpritesDefault = Shader.Find("Sprites/Default");
     }
 
     private void Update()
@@ -45,14 +47,21 @@ public class PlayerStats : MonoBehaviour {
         if (damaged)
             return;
         health--;
-        ChangeMortality();
+        StartCoroutine(FlashCharacter());
     }
 
-    public void ChangeMortality()
+    IEnumerator FlashCharacter()
     {
-		damaged = !damaged;
-		animator.SetBool("Damaged", damaged);
-		if (damaged)
-            Invoke("ChangeMortality", 2);
+		damaged = true;
+        for (int i = 0; i < 12; i++)
+        {
+            texture.material.shader = shaderGUItext;
+            texture.color = Color.white;
+            yield return new WaitForSeconds(.05f);
+            texture.material.shader = shaderSpritesDefault;
+            texture.color = Color.white;
+            yield return new WaitForSeconds(.05f);
+        }
+        damaged = false;
     }
 }
